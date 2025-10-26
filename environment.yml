@@ -1,0 +1,21 @@
+name: dlthg_env
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.9
+  - pip
+  - numpy=1.26.4
+  - scipy
+  - scikit-learn
+  - pandas
+  - networkx
+  - tqdm
+  - pyyaml
+  - pytorch=1.13.1
+  - torchvision=0.14.1
+  - torchaudio=0.13.1
+  - cudatoolkit=11.6
+  - pip:
+      - dhg==0.9.4

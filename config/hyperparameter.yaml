@@ -1,0 +1,175 @@
+feature_module:
+  hg_embed:
+    acm:
+      hindex:
+        hidden_dim: 128
+        num_heads: 4
+        num_layers: 1
+        dropout: 0.0
+        lr: 0.0005587568527664502
+        epochs: 200
+        num_samples: 2048
+      citation:
+        hidden_dim: 128
+        num_heads: 4
+        num_layers: 1
+        dropout: 0.1
+        lr: 0.00010629350167369572
+        epochs: 50
+        num_samples: 512
+      paper:
+        hidden_dim: 128
+        num_heads: 2
+        num_layers: 1
+        dropout: 0.2
+        lr: 0.00027880267597144676
+        epochs: 100
+        num_samples: 1024
+
+    aps:
+      hindex:
+        hidden_dim: 64
+        num_heads: 4
+        num_layers: 1
+        dropout: 0.0
+        lr: 0.009902818504598801
+        epochs: 50
+        num_samples: 1024
+      citation:
+        hidden_dim: 64
+        num_heads: 1
+        num_layers: 2
+        dropout: 0.1
+        lr: 0.0003104730122441875
+        epochs: 100
+        num_samples: 1024
+      paper:
+        hidden_dim: 64
+        num_heads: 8
+        num_layers: 3
+        dropout: 0.1
+        lr: 0.0001137017593446079
+        epochs: 200
+        num_samples: 1024
+
+    dblp:
+      hindex:
+        hidden_dim: 64
+        num_heads: 4
+        num_layers: 1
+        dropout: 0.0
+        lr: 0.00011844389807528365
+        epochs: 50
+        num_samples: 2048
+      citation:
+        hidden_dim: 128
+        num_heads: 1
+        num_layers: 1
+        dropout: 0.0
+        lr: 0.0001493634714309978
+        epochs: 50
+        num_samples: 1024
+      paper:
+        hidden_dim: 128
+        num_heads: 2
+        num_layers: 2
+        dropout: 0.2
+        lr: 0.009695056074652252
+        epochs: 100
+        num_samples: 2048
+
+  sequence:
+    acm:
+      hindex: 
+        T: 20
+      citation: 
+        T: 10 
+      paper: 
+        T: 15 
+
+    aps:
+      hindex: 
+        T: 10 
+      citation: 
+        T: 10 
+      paper: 
+        T: 15 
+
+    dblp:
+      hindex: 
+        T: 25 
+      citation: 
+        T: 15 
+      paper: 
+        T: 25 
+
+predict_module:
+  acm:
+    hindex:
+      hidden_dim: 128
+      num_layers: 3
+      dropout: 0.0
+      lr: 0.0018891585152494043
+      batch_size: 512
+      max_epochs: 200
+    citation:
+      hidden_dim: 64
+      num_layers: 1
+      dropout: 0.0
+      lr: 0.00025104075384414375
+      batch_size: 1024
+      max_epochs: 200  
+    paper:
+      hidden_dim: 256
+      num_layers: 3
+      dropout: 0.0
+      lr: 0.0004273861451086599
+      batch_size: 2048
+      max_epochs: 200
+
+  aps:
+    hindex:
+      hidden_dim: 128
+      num_layers: 2
+      dropout: 0.3
+      lr: 0.0027699200724046174
+      batch_size: 1024
+      max_epochs: 200
+    citation:
+      hidden_dim: 256
+      num_layers: 1
+      dropout: 0.0
+      lr: 0.00034392669294061487
+      batch_size: 2048
+      max_epochs: 400   
+    paper:
+      hidden_dim: 256
+      num_layers: 3
+      dropout: 0.3
+      lr: 0.0003974685834700763
+      batch_size: 1024
+      max_epochs: 200  
+
+  dblp:
+    hindex:
+      hidden_dim: 256
+      num_layers: 1
+      dropout: 0.0
+      lr: 0.004182474686055441
+      batch_size: 2048
+      max_epochs: 100
+    citation:
+      hidden_dim: 256
+      num_layers: 2
+      dropout: 0.0
+      lr: 0.00013426594344429082
+      batch_size: 2048
+      max_epochs: 300  
+    paper:
+      hidden_dim: 128
+      num_layers: 2
+      dropout: 0.0
+      lr: 0.00040023964720873706
+      batch_size: 1024
+      max_epochs: 200
+

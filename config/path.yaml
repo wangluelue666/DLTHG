@@ -1,0 +1,148 @@
+base_path: /home/fugui/WH/baseline/DLTHG
+
+data:
+  datasets:
+    acm: data/dataset/acm/acm_V11_2000_2020_v5.json
+    aps: data/dataset/aps/aps_2000_2020_v9.json
+    dblp: data/dataset/dblp/dblpV16_2000_2020_v5.json
+  active_list:
+    acm: data/active_list/acm/author_ids_active_until_2014_acm.json
+    aps: data/active_list/aps/author_ids_active_until_2014_aps.json
+    dblp: data/active_list/dblp/author_ids_active_until_2014_dblp.json
+  global:
+    acm:
+      author_papers: data/global/acm/acm_author_papers.json
+      author_venues: data/global/acm/acm_author_venues.json
+      citation_index: data/global/acm/acm_citation_index.json
+      coauthor_index: data/global/acm/acm_coauthor_index.json
+      paper_year: data/global/acm/acm_paper_year.json
+    aps:
+      author_papers: data/global/aps/aps_author_papers.json
+      author_venues: data/global/aps/aps_author_venues.json
+      citation_index: data/global/aps/aps_citation_index.json
+      coauthor_index: data/global/aps/aps_coauthor_index.json
+      paper_year: data/global/aps/aps_paper_year.json
+    dblp:
+      author_papers: data/global/dblp/dblp_author_papers.json
+      author_venues: data/global/dblp/dblp_author_venues.json
+      citation_index: data/global/dblp/dblp_citation_index.json
+      coauthor_index: data/global/dblp/dblp_coauthor_index.json
+      paper_year: data/global/dblp/dblp_paper_year.json
+  hg: 
+    acm: data/hg/acm/acm_hgraph_{}.json 
+    aps: data/hg/aps/aps_hgraph_{}.json 
+    dblp: data/hg/dblp/dblp_hgraph_{}.json
+
+features: 
+  struct: 
+    acm: 
+      s_vec: features/struct/acm/acm_author_struct_{}.npy 
+      s_idx: features/struct/acm/acm_author_index_{}.json 
+    aps: 
+      s_vec: features/struct/aps/aps_author_struct_{}.npy 
+      s_idx: features/struct/aps/aps_author_index_{}.json 
+    dblp: 
+      s_vec: features/struct/dblp/dblp_author_struct_{}.npy 
+      s_idx: features/struct/dblp/dblp_author_index_{}.json
+  hg_embed:
+    acm:
+      hindex:
+        e_vec: features/hg_embed/acm/hindex/acm_author_embed_{}.npy
+        e_idx: features/hg_embed/acm/hindex/acm_author_index_{}.json
+        es_vec: features/hg_embed/acm/hindex/author_embed_seq.npy
+        es_idx: features/hg_embed/acm/hindex/author_index_embed.json
+      citation:
+        e_vec: features/hg_embed/acm/citation/acm_author_embed_{}.npy
+        e_idx: features/hg_embed/acm/citation/acm_author_index_{}.json
+        es_vec: features/hg_embed/acm/citation/author_embed_seq.npy
+        es_idx: features/hg_embed/acm/citation/author_index_embed.json
+      paper:
+        e_vec: features/hg_embed/acm/paper/acm_author_embed_{}.npy
+        e_idx: features/hg_embed/acm/paper/acm_author_index_{}.json
+        es_vec: features/hg_embed/acm/paper/author_embed_seq.npy
+        es_idx: features/hg_embed/acm/paper/author_index_embed.json
+    aps:
+      hindex:
+        e_vec: features/hg_embed/aps/hindex/aps_author_embed_{}.npy
+        e_idx: features/hg_embed/aps/hindex/aps_author_index_{}.json
+        es_vec: features/hg_embed/aps/hindex/author_embed_seq.npy
+        es_idx: features/hg_embed/aps/hindex/author_index_embed.json
+      citation:
+        e_vec: features/hg_embed/aps/citation/aps_author_embed_{}.npy
+        e_idx: features/hg_embed/aps/citation/aps_author_index_{}.json
+        es_vec: features/hg_embed/aps/citation/author_embed_seq.npy
+        es_idx: features/hg_embed/aps/citation/author_index_embed.json
+      paper:
+        e_vec: features/hg_embed/aps/paper/aps_author_embed_{}.npy
+        e_idx: features/hg_embed/aps/paper/aps_author_index_{}.json
+        es_vec: features/hg_embed/aps/paper/author_embed_seq.npy
+        es_idx: features/hg_embed/aps/paper/author_index_embed.json
+    dblp:
+      hindex:
+        e_vec: features/hg_embed/dblp/hindex/dblp_author_embed_{}.npy
+        e_idx: features/hg_embed/dblp/hindex/dblp_author_index_{}.json
+        es_vec: features/hg_embed/dblp/hindex/author_embed_seq.npy
+        es_idx: features/hg_embed/dblp/hindex/author_index_embed.json
+      citation:
+        e_vec: features/hg_embed/dblp/citation/dblp_author_embed_{}.npy
+        e_idx: features/hg_embed/dblp/citation/dblp_author_index_{}.json
+        es_vec: features/hg_embed/dblp/citation/author_embed_seq.npy
+        es_idx: features/hg_embed/dblp/citation/author_index_embed.json
+      paper:
+        e_vec: features/hg_embed/dblp/paper/dblp_author_embed_{}.npy
+        e_idx: features/hg_embed/dblp/paper/dblp_author_index_{}.json
+        es_vec: features/hg_embed/dblp/paper/author_embed_seq.npy
+        es_idx: features/hg_embed/dblp/paper/author_index_embed.json
+  sequence:
+    acm:
+      hindex:
+        seq_vec: features/sequence/acm/hindex/author_inputs_rnn_acm.npy
+        seq_idx: features/sequence/acm/hindex/author_index_rnn_acm.json
+      citation:
+        seq_vec: features/sequence/acm/citation/author_inputs_rnn_acm.npy
+        seq_idx: features/sequence/acm/citation/author_index_rnn_acm.json
+      paper:
+        seq_vec: features/sequence/acm/paper/author_inputs_rnn_acm.npy
+        seq_idx: features/sequence/acm/paper/author_index_rnn_acm.json
+    aps:
+      hindex:
+        seq_vec: features/sequence/aps/hindex/author_inputs_rnn_aps.npy
+        seq_idx: features/sequence/aps/hindex/author_index_rnn_aps.json
+      citation:
+        seq_vec: features/sequence/aps/citation/author_inputs_rnn_aps.npy
+        seq_idx: features/sequence/aps/citation/author_index_rnn_aps.json
+      paper:
+        seq_vec: features/sequence/aps/paper/author_inputs_rnn_aps.npy
+        seq_idx: features/sequence/aps/paper/author_index_rnn_aps.json
+    dblp:
+      hindex:
+        seq_vec: features/sequence/dblp/hindex/author_inputs_rnn_dblp.npy
+        seq_idx: features/sequence/dblp/hindex/author_index_rnn_dblp.json
+      citation:
+        seq_vec: features/sequence/dblp/citation/author_inputs_rnn_dblp.npy
+        seq_idx: features/sequence/dblp/citation/author_index_rnn_dblp.json
+      paper:
+        seq_vec: features/sequence/dblp/paper/author_inputs_rnn_dblp.npy
+        seq_idx: features/sequence/dblp/paper/author_index_rnn_dblp.json
+
+target_path:
+  cumulate:
+    acm: targets/author_targets_2015_2020_acm_cumulate.npy
+    aps: targets/author_targets_2015_2020_aps_cumulate.npy
+    dblp: targets/author_targets_2015_2020_dblp_cumulate.npy
+
+result_path: 
+  cumulate:
+    acm: 
+      hindex: results/acm/eval_metrics_acm_hindex_cumulate.json
+      citation: results/acm/eval_metrics_acm_citation_cumulate.json
+      paper: results/acm/eval_metrics_acm_paper_cumulate.json
+    aps: 
+      hindex: results/aps/eval_metrics_aps_hindex_cumulate.json
+      citation: results/aps/eval_metrics_aps_citation_cumulate.json
+      paper: results/aps/eval_metrics_aps_paper_cumulate.json
+    dblp: 
+      hindex: results/dblp/eval_metrics_dblp_hindex_cumulate.json
+      citation: results/dblp/eval_metrics_dblp_citation_cumulate.json
+      paper: results/dblp/eval_metrics_dblp_paper_cumulate.json
+
