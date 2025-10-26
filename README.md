@@ -1,7 +1,7 @@
 
 # DLTHG: Dynamic Learning on Temporal HyperGraphs
 
-## 📖 Project Overview
+##  Project Overview
 This project provides an implementation of **scholar influence prediction** based on temporal hypergraph representation learning.  
 The pipeline includes:  
 1. Data preprocessing & feature extraction  
@@ -11,7 +11,7 @@ The pipeline includes:
 
 
 
-## ⚙️ Installation
+##  Installation
 
 ### Option 1: Conda (Recommended)
 ```bash
@@ -25,11 +25,11 @@ conda activate dlthg_env
 pip install -r requirements.txt
 ```
 
-> ⚠️ Make sure your **PyTorch** version matches `1.13.1` with **CUDA 11.6**, otherwise `dhg==0.9.4` may fail to install.
+>  Make sure your **PyTorch** version matches `1.13.1` with **CUDA 11.6**, otherwise `dhg==0.9.4` may fail to install.
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 ### Step 1: Data & Feature Preparation
 
@@ -45,43 +45,4 @@ python run_train.py --dataset acm --target hindex --gpu_id 0
 
 ---
 
-## 📂 Project Structure
 
-```text
-DLTHG/
-├── config/                 # Path and hyperparameter configs
-├── data/                   # Raw and processed data
-├── features/               # Extracted features
-├── models/                 # Model implementations (HGNN-SI, Dual-LSTM, etc.)
-├── run_prepare.py          # Preparation script
-├── run_train.py            # Training script
-├── environment.yml         # Conda environment file
-├── requirements.txt        # Pip requirements
-└── README.md               # Project documentation
-```
-
----
-
-## 📊 Results
-
-(Coming soon: experimental results and evaluation metrics)
-
----
-
-## 📜 License
-
-MIT License. See `LICENSE` file for details.
-
----
-
-## 🙏 Acknowledgements
-
-* [PyTorch](https://pytorch.org/)
-* [DHG: Deep Hypergraph Library](https://github.com/iMoonLab/Deep-Hypergraph)
-
-```
-
-这样一整段全是 **Markdown**，直接复制保存成 `README.md` 就能用了。  
-
-要不要我再帮你在 **Results** 那一节加一个 **表格模板**（RMSE / MAE / R² 三列），方便你以后直接填实验结果？
-```
