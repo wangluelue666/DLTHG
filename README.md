@@ -1,14 +1,5 @@
 
-# DLTHG: Dynamic Learning on Temporal HyperGraphs
-
-##  Project Overview
-This project provides an implementation of **scholar influence prediction** based on temporal hypergraph representation learning.  
-The pipeline includes:  
-1. Data preprocessing & feature extraction  
-2. Hypergraph construction  
-3. Structural / sequential / embedding feature extraction  
-4. Dual-LSTM predictor training  
-
+# DLTHG: A Dual-Branch LSTM Framework Integrating Temporal and Heterogeneous Academic Hypergraphs for Scholar Impact Prediction
 
 
 ##  Installation
